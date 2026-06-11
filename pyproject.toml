@@ -1,0 +1,43 @@
+[project]
+name = "travel-planner-kyushu"
+version = "0.1.0"
+description = "Autonomous Travel Planner Agent for Kyushu 5-day self-drive trips"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.2",
+    "langchain-core>=1.4",
+    "langchain-openai>=0.2",
+    "langchain-mcp-adapters>=0.2",
+    "streamlit>=1.58",
+    "streamlit-folium>=0.27",
+    "firecrawl-py>=4.0",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "fast-flights",
+    "serpapi",
+    "polyline",
+    "python-dotenv",
+    "httpx",
+    "tenacity",
+    "pydantic>=2.10",
+    "redis>=5.0",
+    "langchain-ollama>=1.1.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra -q --strict-markers"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]

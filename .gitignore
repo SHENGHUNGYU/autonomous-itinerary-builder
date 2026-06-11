@@ -1,0 +1,50 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+
+# Project specific
+.env
+.env.local
+.env.*.local
+logs/
+*.log
+LangSmith_log/
+artifacts/
+eval_results/
+trace_dumps/
+*.trace.json
+
+# API keys & secrets (never commit)
+*.key
+secrets/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# MCP / Docker temp
+*.pid
+
+# Node
+node_modules/
+package-lock.json
+
+# 研究結果快取
+.cache/
+
+# Misc local docs / assets
+PROGRESS.md
+PROGRESS_*.md
+Spec.md
+*.pptx
+*.pdf
